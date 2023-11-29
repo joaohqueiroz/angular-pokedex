@@ -1,6 +1,6 @@
-@use "./assets/styles/reset.scss";
-@use "./assets/styles/variables.scss";
-@use "./assets/styles/rem-calc.scss";
+@import "./assets/styles/reset.scss";
+@import "./assets/styles/variables.scss";
+@import "./assets/styles/rem-calc.scss";
 
 html {
   font-family: 'Roboto', sans-serif;
