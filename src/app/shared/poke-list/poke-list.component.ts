@@ -7,11 +7,15 @@ import { PokeApiService } from '../../services/poke-api.service';
   styleUrl: './poke-list.component.scss',
 })
 export class PokeListComponent implements OnInit {
+  public getAllPokemons: any;
+
   constructor(private pokeApiService: PokeApiService) {}
 
   ngOnInit(): void {
-    this.pokeApiService.apiListAllPokemons.subscribe({
-      next: (res) => res,
-    });
+    this.pokeApiService.apiListAllPokemons.subscribe(
+      res => {
+        this.getAllPokemons = res.results;
+      }
+    );
   }
 }
